@@ -1,0 +1,27 @@
+.container {
+    border: 1px solid #000;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.row {
+    padding: .5rem 1rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aliceblue;
+    white-space: pre-wrap;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    margin-bottom: .5rem;
+}

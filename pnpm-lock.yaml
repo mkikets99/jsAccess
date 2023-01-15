@@ -19,6 +19,7 @@ specifiers:
   npm-run-all: ^4.1.5
   react: ^18.2.0
   react-dom: ^18.2.0
+  skeleton-css: ^2.0.4
   typescript: ^4.8.4
 
 dependencies:
@@ -32,6 +33,7 @@ dependencies:
   morgan: 1.10.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  skeleton-css: 2.0.4
 
 devDependencies:
   '@remix-run/dev': 1.10.1_biqbaboplfbrettd7655fr4n2y
@@ -7026,6 +7028,10 @@ packages:
     dependencies:
       semver: 7.0.0
     dev: true
+
+  /skeleton-css/2.0.4:
+    resolution: {integrity: sha512-e+WEQGBFHk7N5gu9IHUj4ySGc/k84LqZO52ldLHQxOPhVT6rE++OGADO4I+yyKxMVlmt9UVicYBzc6EfiYB8xA==}
+    dev: false
 
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
