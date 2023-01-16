@@ -21,8 +21,8 @@ export default function Step1() {
       <hr />
       <Form method="post" reloadDocument={false}>
         <div className="row">
-          <label></label>
-          <input className="u-full-width" type="text" />
+          <label htmlFor="path">Path to logs folder:</label>
+          <input className="u-full-width" id="path" type="text" />
         </div>
       </Form>
     </>

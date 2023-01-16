@@ -16,8 +16,13 @@ export default function SetupIndex() {
       <Form method="post">
         <div className="row">
           <label htmlFor="lang">{lang.get("setup.lang")}:</label>
-          <select className="u-full-width" name="lang" id="lang">
-            <option key={-1} selected value={lang.get("language.code")}>
+          <select
+            className="u-full-width"
+            name="lang"
+            id="lang"
+            defaultValue={"en_US"}
+          >
+            <option key={-1} value={lang.get("language.code")}>
               {lang.get("language.name")}
             </option>
             {Object.keys(langs).map((k, i) => {

@@ -10,6 +10,7 @@
     "typecheck": "tsc -b"
   },
   "dependencies": {
+    "@picocss/pico": "^1.5.6",
     "@prisma/client": "^4.8.1",
     "@remix-run/express": "^1.10.1",
     "@remix-run/node": "^1.10.1",

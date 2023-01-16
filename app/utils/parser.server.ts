@@ -3,6 +3,15 @@ import * as fs from "fs";
 import sha256File from "sha256-file";
 import { prisma } from "./prisma.server";
 
+export const predefinedParsers = {
+  "nginx-proxy-manager":
+    '[%d:%t %^] %^ %^ %s - %m %^ %v "%U" [Client %h] [Length %b] [Gzip %^] [Sent-to %^] "%u" "%R"',
+  COMMON: '%h %^ %^ [%d:%t %^] "%r" %s %b',
+  VCOMMON: '%v %h %l %u %t "%r" %s %b',
+  COMBINED: '%h %^ %^ [%d:%t %^] "%r" %s %b "%R" "%u"',
+  VCOMBINED: '%v %h %l %u %t "%r" %s %b "%R" "%u"',
+};
+
 export async function checkLog(_path: string) {
   if (!fs.existsSync(_path)) {
     return { ok: false, reason: "path.noexists" };
@@ -17,7 +26,6 @@ export async function checkLog(_path: string) {
     orderBy: { id: "desc" },
     take: 10,
   });
-  
 }
 
 export function parseLog(log_inp: string, parseStr: string) {
