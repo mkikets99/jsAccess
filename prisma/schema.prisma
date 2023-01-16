@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Config {
+  id        Int      @id @default(autoincrement())
+  path      String
+  value     String?
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  email       String   @unique
+  password    String
+  canSeeHosts String
+}
+
+model LogEntry {
+  id        Int     @id @default(autoincrement())
+  date      String //%d
+  time      String? //%t
+  hostname  String //%v
+  userIp    String? //%h
+  url       String? //%U
+  status    Int? //%s
+  method    String? //%m
+  size      Int? //%b
+  userAgent String? //%u
+}
