@@ -26,6 +26,17 @@ model User {
   canSeeHosts String
 }
 
+model Log {
+  id          Int        @id @default(autoincrement())
+  createdAt   DateTime   @default(now())
+  path        String     @unique
+  type        String
+  logPattern  String
+  timePattern String
+  datePattern String
+  LogEntry    LogEntry[]
+}
+
 model LogEntry {
   id        Int     @id @default(autoincrement())
   date      String //%d
@@ -37,4 +48,7 @@ model LogEntry {
   method    String? //%m
   size      Int? //%b
   userAgent String? //%u
+  referer   String?
+  fromLog   Log     @relation(fields: [logId], references: [id])
+  logId     Int
 }

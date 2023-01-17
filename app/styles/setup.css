@@ -1,6 +1,7 @@
 .container {
     border: 1px solid #000;
     border-radius: 1rem;
+    box-shadow: .5rem .5rem .5rem .4rem;
 }
 
 .row {
@@ -22,4 +23,26 @@ hr {
 
 h1 {
     margin-bottom: .5rem;
+}
+
+.annotation {
+    font-size: small;
+    color: #999
+}
+
+.error {
+    color: #c33
+}
+
+input::placeholder {
+    color: #ccc;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    color: #ccc;
+}
+
+input::-ms-input-placeholder {
+    color: #ccc;
 }

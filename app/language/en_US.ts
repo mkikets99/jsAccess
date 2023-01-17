@@ -11,6 +11,8 @@ const en_US: Record<string | number | symbol, string> = {
   "setup.back": "Back",
   "setup.lang": "Language",
   "language.code": "en_US",
+  "setup.1.path": "Path to log file",
+  "setup.1.path2": "You will be able to add more after setup procedure",
 };
 
 export default en_US;
